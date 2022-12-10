@@ -1,4 +1,4 @@
-import { useReducer } from "react";A
+import { useReducer } from "react";
 
 import CartContext from "./cart-context";
 
@@ -29,7 +29,7 @@ const cartReducer = (state, action) => {
       updatedItems[existingCartItemIndex] = updatedItem;
     } else {
       updatedItems = state.items.concat(action.item);
-    }OOB
+    }
     return {
       items: updatedItems,
       totalAmount: updatedTotalAmount,

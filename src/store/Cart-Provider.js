@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useReducer } from "react";A
 
 import CartContext from "./cart-context";
 
@@ -29,7 +29,7 @@ const cartReducer = (state, action) => {
       updatedItems[existingCartItemIndex] = updatedItem;
     } else {
       updatedItems = state.items.concat(action.item);
-    }
+    }OOB
     return {
       items: updatedItems,
       totalAmount: updatedTotalAmount,
@@ -41,7 +41,7 @@ const cartReducer = (state, action) => {
       (item) => item.id === action.id
     );
     const existingItem = state.items[existingCartItemIndex];
-    const updatedTotalAmount = state.totalAmuount - existingItem.price;
+    const updatedTotalAmount = state.totalAmount - existingItem.price;
     let updatedItems;
     if (existingItem.amount === 1) {
       updatedItems = state.items.filter((item) => item.id !== action.id);
@@ -49,6 +49,7 @@ const cartReducer = (state, action) => {
       const updatedItem = { ...existingItem, amount: existingItem.amount - 1 };
       updatedItems = [...state.items];
       updatedItems[existingCartItemIndex] = updatedItem;
+	    OB
     }
     return {
       items: updatedItems,
